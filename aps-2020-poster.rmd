@@ -1,0 +1,126 @@
+---
+title: 'Measuring Perceived Prevalence of Defecation Behavior in Bihar, India'
+author:
+  - name: Jinyi Kuang
+    affil: 1
+    twitter: jinyikuang 
+    email: jkuang@sas.upenn.edu
+    orcid: 0000-0003-4173-3246
+    main:  true
+  - name: Erik Thulin
+    affil: 2
+  - name: Sania Ashraf
+    affil: 1
+  - name: Alex Shpnev
+    affil: 1
+  - name: Upasak Das
+    affil: 1
+  - name: Maryann G. Delea  
+    affil: 3
+  - name: Peter McNally 
+    affil: 1
+  - name: Cristina Bicchieri 
+    affil: 1
+
+affiliation:
+  - num: 1
+    address: Center for Social Norms and Behavioral Dynamics, University of Pennsylvania, United States
+  - num: 2
+    address: Rare, United States  
+  - num: 3
+    address: Emory University, United States
+    
+#----MAIN----#    
+main_fontfamily: "Rasa"  
+main_findings:
+  - "**False consensus bias of perceived prevalence of defecation behavior in India:** those who defecate in the open think most others do too."
+  - '![](figure/main.png){width=95% .main_pic}'
+logoleft_name: '![](figure/upenn.png){width=30% .main-img-left}'
+logoright_name: '![](figure/center.png){width=30% .main-img-right}'
+
+#----FONT STYLE----#
+#font_family: "Palatino"
+affiliation_textsize: "30pt"
+title_textsize: "82pt"
+body_textsize: "32pt"
+#----COLOURS----#
+primary_colour: "#011F5B"     
+secondary_colour: "#004785" 
+accent_colour: "#000000"  
+
+#----POSTER SIZE & COLUMN FORMATTING----#
+poster_height: "38in" 
+poster_width: "48in" 
+column_numbers: 3 
+columnline_width: "10mm"
+
+output: 
+  posterdown::posterdown_betterland:
+    self_contained: false
+    pandoc_args: --mathjax
+    highlight: haddock
+    number_sections: false
+link-citations: true
+bibliography: citations.bib
+csl: apa-6th-edition.csl
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(results = 'asis',
+                      echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      out.width = "100%")
+options(knitr.table.format = "html") 
+
+library(pagedown)
+```
+
+```{r, include=FALSE}
+knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
+```
+
+# Background 
+
+People often form perceptions about how prevalent a behavior is in a social group. However, these perceptions can be inaccurate and biased[@Baer1991]. While persistent undesirable practices in lower-income countries have drawn global attention, evidence regarding people’s perception of  how prevalent these practices are is scarce. Among those harmful practices, open defecation in India remains a significant public health concern, where it perpetuates the vicious cycle of disease and poverty[@WHO2019]. In this study, we focus on measuring the perceived prevalence of open defecation among respondents in Bihar, India. We examined the bias in perceived prevalence, which is defined as a pattern of deviation from the actual prevalence of open defecation. 
+
+
+# Data collection
+
+We drew data for our analyses from the Longitudinal Evaluation of Networks and Norms Study (LENNS) carried out in 2017 to 2018 in Bihar, India. Trained fieldworkers administered a cross-sectional survey in Hindi among respondents aged 16 to 65 years in thirty sampling units in Bihar, India [@Bicchieri2018]. The study sample was drawn from three types of geographic regions, including six Gram Panchayats (rural communities), eighteen census wards from six Nagar Panchayats (Peri-urban communities), and six registered slums (urban communities). We qualitatively tested the survey items framing to assess numeric comprehension. 
+
+# Measurement
+
+- `Community level open defecation rate` We first asked respondents "Where did you defecate the last time you had to? Defecate in the open or use a toilet?", then calculate the proportion of individual answered defecate in the open for each sampled community
+
+- `Individual-level perceived prevalence of open defecation` we asked respondents "Out of ten members in your community, how many do you think defecate in the open the last time they needed to defecate?" The answers range from 0 to 10 where 0 represents the lowest prevalence and 10 represents the highest prevalence.
+
+- `Individual-level bias in the perceived prevalence of open defecation` We linearly transform the prevalence perception measure and calculated the discrepancy between the perceived and actual prevalence of open defecation. Positive values indicate overestimations and negative values indicate underestimations. 
+
+- `Individual-level toilet use consistency` We asked respondents "In the past week, how often have you used a latrine to defecate? Never, occasionally, frequently, or every time?" We categorize the answer as open defecation, inconsistent toilet use, and consistent toilet use.  
+
+# Analysis
+
+- A multivariate model controlling for respondents’ gender, age, educational attainment, socio-religion and socio-economic status, and community of residence.
+$$
+Y(bias) = \beta(behavior)+\beta(gender)+\beta(age)+\beta(education)
+$$
+$$\beta(caste)+\beta(religion)+
+\beta(SES)+\beta(community)
+$$
+
+# Results 
+- `Accuracy`: respondents' perceived prevalence of open defecation was deviated from the actual prevalence of open defecation by 17% on average (SD=0.15).
+- `Bias`: Those who defecated in the open in the week prior to survey administration perceived that more people defecated in the open than was reported within their communities, those who use a toilet perceived that fewer people defecated in the open than was reported within their community.
+
+# Discussion
+
+- We found not all people overestimate the prevalence of undesirable behaviors (i.e., open defecation) in our study context but a false consensus bias [@Ross1977].
+- If social beliefs about what most others do affect behavior, we should pay attention to how biases in social beliefs support or hinder behaviors change. 
+- Program implementers, policy-makers, and researchers who seek to correct misperceptions about open defecation by broadcasting real prevalence should carefully design interventions to avoid unintended consequences such as the boomerang effects (e.g., those who occasionally a toilet stop using it after knowing that toilet use is less prevalence than they thought)[@Schultz2007].
+- We encourage measuring the prevalence perception bias at the baseline to identify individuals who are more likely to overestimate the prevalence of undesirable behaviors and correct misperceptions through the use of personalized interventions (e.g., household counseling, mobile phone reminders)[@Neighbors2019]. 
+
+
+# References

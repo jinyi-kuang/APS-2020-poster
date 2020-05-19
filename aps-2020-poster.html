@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Measuring Perceived Prevalence of Defecation Behavior in Bihar, India</title>
+
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 48in 38in;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 48in;
+height: 38in;
+text-align: justify;
+font-size: 32pt;
+background-color: #FFFFFF;
+color: #000000;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #00478524;
+color: #011F5B;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #011F5B20;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 48in;
+height: 38in;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+-webkit-column-gap: 50%;
+background-color: #ffffff;
+font-family: Rasa;
+color: #000000;
+}
+span.citation {
+  color: #004785;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #004785;
+}
+#title {
+font-size: 82pt;
+text-align: left;
+margin: 0;
+line-height: 90%;
+border-bottom: 0;
+}
+#author {
+color: #011F5B;
+margin: 0;
+line-height: 90%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 1em;
+color: #00000060;
+font-style: italic;
+font-size: 30pt;
+margin: 0;
+}
+sup {
+color: #000000;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #004785;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+}
+.outer h1 {
+text-align: center;
+margin-top: 0.5in;
+margin-bottom: 0.5in;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p {
+color: #000000;
+}
+.outer ol {
+text-align: left;
+}
+.main {
+width: calc(48in / 2);
+height: 38in;
+position: absolute;
+margin-left: calc(48in / 4);
+background-color: #011F5B;
+color: #FFFFFF90;
+font-family: Rasa;
+background-image: linear-gradient(#011F5B 50%, #004785);
+}
+.main strong {
+color: #FFFFFF;
+}
+img.main-img-left {
+width: 20%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+img.main-img-right {
+width: 18%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+padding-top: 20%;
+font-size: 170px;
+text-align: left;
+}
+.fab {
+color: #00000060;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000060;
+font-size: 35px;
+}
+.envelope {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 48in;
+height: 38in;
+padding: 0cm;
+background-color: #ffffff;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+.main p {
+  padding-left: 30mm;
+  padding-right: 30mm;
+}
+.main_pic {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orcid img {
+  width: 3%;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="column outer">
+<br>
+<div class="title section">
+<h1 id="title">Measuring Perceived Prevalence of Defecation Behavior in Bihar, India</h1>
+<br>
+<h3 id="author" class="author">
+
+Jinyi Kuang<sup> 1, <a class="orcid" href="https://orcid.org/0000-0003-4173-3246"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup><br>
+<a class="twitter" href="https://mobile.twitter.com/jinyikuang"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@jinyikuang</a><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:jkuang@sas.upenn.edu" class="email">jkuang@sas.upenn.edu</a> <br>
+       </h3>
+
+<h5 id="author_extra" class="author_extra">
+ Erik Thulin<sup>2</sup>
+ Sania Ashraf<sup>1</sup>
+ Alex Shpnev<sup>1</sup>
+ Upasak Das<sup>1</sup>
+ Maryann G. Delea<sup>3</sup>
+ Peter McNally<sup>1</sup>
+ Cristina Bicchieri<sup>1</sup>
+</h5>
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> Center for Social Norms and Behavioral Dynamics, University of Pennsylvania, United States<br> <sup>2</sup> Rare, United States<br> <sup>3</sup> Emory University, United States
+</p>
+
+</div>
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>People often form perceptions about how prevalent a behavior is in a social group. However, these perceptions can be inaccurate and biased<span class="citation">(Baer, Stacy, &amp; Larimer, <a href="#ref-Baer1991">1991</a>)</span>. While persistent undesirable practices in lower-income countries have drawn global attention, evidence regarding people’s perception of how prevalent these practices are is scarce. Among those harmful practices, open defecation in India remains a significant public health concern, where it perpetuates the vicious cycle of disease and poverty<span class="citation">(United Nations Children’s Fund (UNICEF) and World Health Organization, <a href="#ref-WHO2019">2019</a>)</span>. In this study, we focus on measuring the perceived prevalence of open defecation among respondents in Bihar, India. We examined the bias in perceived prevalence, which is defined as a pattern of deviation from the actual prevalence of open defecation.</p>
+</div>
+<div id="data-collection" class="section level1">
+<h1>Data collection</h1>
+<p>We drew data for our analyses from the Longitudinal Evaluation of Networks and Norms Study (LENNS) carried out in 2017 to 2018 in Bihar, India. Trained fieldworkers administered a cross-sectional survey in Hindi among respondents aged 16 to 65 years in thirty sampling units in Bihar, India <span class="citation">(<span class="citeproc-not-found" data-reference-id="Bicchieri2018"><strong>???</strong></span>)</span>. The study sample was drawn from three types of geographic regions, including six Gram Panchayats (rural communities), eighteen census wards from six Nagar Panchayats (Peri-urban communities), and six registered slums (urban communities). We qualitatively tested the survey items framing to assess numeric comprehension.</p>
+</div>
+<div id="measurement" class="section level1">
+<h1>Measurement</h1>
+<ul>
+<li><p><code>Community level open defecation rate</code> We first asked respondents “Where did you defecate the last time you had to? Defecate in the open or use a toilet?”, then calculate the proportion of individual answered defecate in the open for each sampled community</p></li>
+<li><p><code>Individual-level perceived prevalence of open defecation</code> we asked respondents “Out of ten members in your community, how many do you think defecate in the open the last time they needed to defecate?” The answers range from 0 to 10 where 0 represents the lowest prevalence and 10 represents the highest prevalence.</p></li>
+<li><p><code>Individual-level bias in the perceived prevalence of open defecation</code> We linearly transform the prevalence perception measure and calculated the discrepancy between the perceived and actual prevalence of open defecation. Positive values indicate overestimations and negative values indicate underestimations.</p></li>
+<li><p><code>Individual-level toilet use consistency</code> We asked respondents “In the past week, how often have you used a latrine to defecate? Never, occasionally, frequently, or every time?” We categorize the answer as open defecation, inconsistent toilet use, and consistent toilet use.</p></li>
+</ul>
+</div>
+<div id="analysis" class="section level1">
+<h1>Analysis</h1>
+<ul>
+<li>A multivariate model controlling for respondents’ gender, age, educational attainment, socio-religion and socio-economic status, and community of residence.
+<span class="math display">\[
+Y(bias) = \beta(behavior)+\beta(gender)+\beta(age)+\beta(education)
+\]</span>
+<span class="math display">\[\beta(caste)+\beta(religion)+
+\beta(SES)+\beta(community)
+\]</span></li>
+</ul>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<ul>
+<li><code>Accuracy</code>: respondents’ perceived prevalence of open defecation was deviated from the actual prevalence of open defecation by 17% on average (SD=0.15).</li>
+<li><code>Bias</code>: Those who defecated in the open in the week prior to survey administration perceived that more people defecated in the open than was reported within their communities, those who use a toilet perceived that fewer people defecated in the open than was reported within their community.</li>
+</ul>
+</div>
+<div id="discussion" class="section level1">
+<h1>Discussion</h1>
+<ul>
+<li>We found not all people overestimate the prevalence of undesirable behaviors (i.e., open defecation) in our study context but a false consensus bias <span class="citation">(Ross, Greene, &amp; House, <a href="#ref-Ross1977">1977</a>)</span>.</li>
+<li>If social beliefs about what most others do affect behavior, we should pay attention to how biases in social beliefs support or hinder behaviors change.</li>
+<li>Program implementers, policy-makers, and researchers who seek to correct misperceptions about open defecation by broadcasting real prevalence should carefully design interventions to avoid unintended consequences such as the boomerang effects (e.g., those who occasionally a toilet stop using it after knowing that toilet use is less prevalence than they thought)<span class="citation">(Schultz, Nolan, Cialdini, Goldstein, &amp; Griskevicius, <a href="#ref-Schultz2007">2007</a>)</span>.</li>
+<li>We encourage measuring the prevalence perception bias at the baseline to identify individuals who are more likely to overestimate the prevalence of undesirable behaviors and correct misperceptions through the use of personalized interventions (e.g., household counseling, mobile phone reminders)<span class="citation">(Neighbors et al., <a href="#ref-Neighbors2019">2019</a>)</span>.</li>
+</ul>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Baer1991">
+<p>Baer, J. S., Stacy, A., &amp; Larimer, M. (1991). Biases in the perception of drinking norms among college students. <em>Journal of Studies on Alcohol</em>, <em>52</em>(6), 580–586. <a href="https://doi.org/10.15288/jsa.1991.52.580">https://doi.org/10.15288/jsa.1991.52.580</a></p>
+</div>
+<div id="ref-Neighbors2019">
+<p>Neighbors, C., DiBello, A. M., Young, C. M., Steers, M. L. N., Rinker, D. V., Rodriguez, L. M., … Lewis, M. A. (2019). Personalized normative feedback for heavy drinking: An application of deviance regulation theory. <em>Behaviour Research and Therapy</em>, <em>115</em>, 73–82. <a href="https://doi.org/10.1016/j.brat.2018.11.004">https://doi.org/10.1016/j.brat.2018.11.004</a></p>
+</div>
+<div id="ref-Ross1977">
+<p>Ross, L., Greene, D., &amp; House, P. (1977). The &quot;false consensus effect&quot;: An egocentric bias in social perception and attribution processes. <em>Journal of Experimental Social Psychology</em>, <em>13</em>(3), 279–301. <a href="https://doi.org/10.1016/0022-1031(77)90049-X">https://doi.org/10.1016/0022-1031(77)90049-X</a></p>
+</div>
+<div id="ref-Schultz2007">
+<p>Schultz, P. W., Nolan, J. M., Cialdini, R. B., Goldstein, N. J., &amp; Griskevicius, V. (2007). The Constructive, Destructive, and Reconstructive Power of Social Norms.(Author abstract). <em>Psychological Science</em>, <em>18</em>(5), 429. Retrieved from <a href="http://assets.csom.umn.edu/assets/118375.pdf">http://assets.csom.umn.edu/assets/118375.pdf</a></p>
+</div>
+<div id="ref-WHO2019">
+<p>United Nations Children’s Fund (UNICEF) and World Health Organization. (2019). <em>Progress on household drinking water, sanitation and hygiene 2000-2017: Special focus on inequalities</em>. Retrieved from <a href="https://data.unicef.org/resources/progress-drinking-water-sanitation-hygiene-2019/">https://data.unicef.org/resources/progress-drinking-water-sanitation-hygiene-2019/</a></p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="main">
+<p><strong>False consensus bias of perceived prevalence of defecation behavior in India:</strong> those who defecate in the open think most others do too.<br><br> <img src="figure/main.png" class="main_pic" style="width:95.0%" /></p>
+<img src="figure/upenn.png" class="main-img-left" style="width:30.0%" />
+<img src="figure/center.png" class="main-img-right" style="width:30.0%" />
+</div>
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+var script = document.createElement("script");
+script.type = "text/javascript";
+var src = "true";
+if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+if (location.protocol !== "file:" && /^https?:/.test(src))
+src = src.replace(/^https?:/, '');
+script.src = src;
+document.getElementsByTagName("head")[0].appendChild(script);
+})();
+</script>
+
+
+</body>
+</html>
