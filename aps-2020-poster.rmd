@@ -89,13 +89,13 @@ People often form perceptions about how prevalent a behavior is in a social grou
 
 # Data collection
 
-We drew data for our analyses from the Longitudinal Evaluation of Networks and Norms Study (LENNS) carried out in 2017 to 2018 in Bihar, India. Trained fieldworkers administered a cross-sectional survey in Hindi among respondents aged 16 to 65 years in thirty sampling units in Bihar, India [@Bicchieri2018]. The study sample (n=2413, female=53%) was drawn from three types of geographic regions, rural communities (n=790),  peri-urban communities (n=811), and urban slum communities (n=812). We qualitatively tested the framing of survey items to assess numeric comprehension among similar respondents.
+We drew data for our analyses from the Longitudinal Evaluation of Networks and Norms Study (LENNS) carried out from 2017 to 2018 in Bihar, India. Trained fieldworkers administered a cross-sectional survey in Hindi among respondents aged 16 to 65 years in thirty sampling units in Bihar, India [@Bicchieri2018]. The study sample (n=2413, female=53%) was drawn from three types of geographic regions, rural communities (n=790),  peri-urban communities (n=811), and urban slum communities (n=812). We qualitatively tested the framing of survey items to assess numeric comprehension among similar respondents.
 
 # Measurement
 
-- `Community level open defecation rate` We first asked respondents "Where did you defecate the last time you had to? Defecate in the open or use a toilet?", then calculated the proportion of individual answered defecate in the open for each sampled community
+- `Community level open defecation rate` We first asked respondents "Where did you defecate the last time you had to? Defecate in the open or use a toilet?", then calculated the proportion of individual answered defecate in the open for each sampled community.
 
-- `Individual-level perceived prevalence of open defecation` we asked respondents "Out of ten members in your community, how many do you think defecate in the open the last time they needed to defecate?" The answers ranged from 0 to 10 where 0 represented the lowest prevalence and 10 represented the highest prevalence.
+- `Individual-level perceived prevalence of open defecation` We asked respondents "Out of ten members in your community, how many do you think defecate in the open the last time they needed to defecate?" The answers ranged from 0 to 10 where 0 represented the lowest prevalence and 10 represented the highest prevalence.
 
 - `Individual-level bias in the perceived prevalence of open defecation` We linearly transformed the prevalence perception measure and calculated the discrepancy between the perceived and actual prevalence of open defecation. Positive values indicated overestimations and negative values indicated underestimations. 
 
