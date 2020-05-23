@@ -49,7 +49,7 @@ secondary_colour: "#004785"
 accent_colour: "#000000"  
 
 #----POSTER SIZE & COLUMN FORMATTING----#
-poster_height: "38in" 
+poster_height: "40in" 
 poster_width: "48in" 
 column_numbers: 3 
 columnline_width: "10mm"
@@ -116,8 +116,9 @@ $$
 
 # Discussion
 
-- Our findings suggest a false consensus bias in which people tend to perceive their own defecation practice is more common in their communities [@Ross1977].
-- Scholars, policy-makers, and program implementers who seek to correct misperceptions about open defecation prevalence should consider measuring the bias to avoid unintended consequences such as the boomerang effects (e.g., those who occasionally a toilet stop using it after knowing that toilet use is less prevalence than they thought)[@Schultz2007].
+- Our findings suggest a false consensus bias in which people tend to perceive their own defecation practice is more common in their communities[@Ross1977].
+- We used the physical residency as a proxy for community as suggested by our cognitive interviews with community members[@Bicchieri2018]. However, there may be subjective variation in estimating open defecation prevalence due to differences in the respondents’ definition of what constitutes their ‘community’. Future research is needed to understand the respondents’ perception of social proximity.
+- Scholars, policy-makers, and program implementers who seek to correct misperceptions about open defecation prevalence should consider measuring the bias to avoid unintended consequences such as the boomerang effects[@Schultz2007] (e.g., those who occasionally use a toilet stop using it after knowing that toilet use is less prevalence than they thought).
 - We suggest identifying individuals who are more likely to overestimate the prevalence of undesirable behaviors and correct misperceptions through the use of personalized feedbacks (e.g., household counseling, mobile phone reminders)[@Neighbors2019]. 
 
 
